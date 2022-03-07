@@ -1,5 +1,9 @@
 import dynamic from "next/dynamic";
 
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+
 const Ace = dynamic(() => import("react-ace"), {
   loading: () => <div>Loading...</div>,
   ssr: false,
@@ -13,3 +17,5 @@ export default function Index() {
     </main>
   );
 }
+
+console.log("x", firebase);
